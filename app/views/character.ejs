@@ -1,0 +1,195 @@
+<%- include('partials/header') %>
+ <!-- Start of main content -->
+ <main class="container_character" uk-filter="target: .js-filter">
+    <section class="characters-left">
+        <nav class="breadcrumb-content" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+              <li class="breadcrumb-item"><a href="/characters">Liste des personnages</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Harry Potter</li>
+            </ol>
+          </nav>
+         <table class="uk-table">
+          
+            <thead>
+                <tr>
+                    <th><h2 class="h2_title"><% character.firstname %> <% character.lastname %></h2></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td>
+                    <ul class="list-category">
+                        <% for (let organisation of organisations) { %>
+
+                    <li>
+                        <a href="/oraganisation/:id" class="btn-category <% organisation.name %>">
+                            <img src="../images/<% organisation.name.toLowerCase() %>.png" class="ico-category" alt="<% organisation.name %>" rel="<% organisation.name %>">
+                        </a>
+                    </li>
+                    
+                    <% } %>
+                    </ul>
+                </td>
+            </tr>
+
+                <tr>
+                    <td><h3>Informations générales</h3></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Nom complet :</td>
+                    <td><% character.firstname %> <% character.lastname %></td>
+                </tr>
+                
+                <tr>
+                    <td class="description-characters-underline">Pourquoi ce nom?</td>
+                    <td><% character.why_this_name %></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Date de naissance :</td>
+                    <td><% character.birthday %></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Décès :</td>
+                    <td><% character.deathday %></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Surnoms :</td>
+                    <td><% character.surnom %></td>
+                </tr>
+                <tr>
+                    <td><h3>Famille, amis, etc...</h3></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Type de sang:</td>
+                    <td><% blood.name %></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Famille :</td>
+                    <td><a href="/family/:id"><% family.name %></a></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Père :</td>
+                    <td><a href="/character/:id"><% character.father_id %>"></a></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Mère :</td>
+                    <td><a href="/character/:id"><% character.mother_id %>"></a></td>
+                </tr>
+                <!-- <tr>
+                    <td class="description-characters-underline">Grands-parents</td>
+                    <td>Mr & Mme Potter, Mr & Mme Evans</td>
+                </tr> -->
+                <tr>
+                    <td class="description-characters-underline">Oncles/Tantes</td>
+                    <td><a href="character/:id"><% character.oncle_tante %></a></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Frères/Soeurs :</td>
+                    <td>Néant</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Cousins et cousines :</td>
+                    <td><a href="famille-dursley">Dudley Dursley</a></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Époux/Épouse :</td>
+                    <td><a href="giny-weasley.html">Ginny Weasley (RM)</a></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Enfants :</td>
+                    <td><a href="enfants-potter.html">James Sirius, Albus Severus, Lily Luna (RM/e)</a></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Neveux/Nièces :</td>
+                    <td><a href="famille-weasley">Molly Weasley II, Lucy Weasley, Rose, Hugo, Victoire Weasley, Dominique Weasley, Louis Weasley, Fred Weasley II, Roxanne Weasley II (RM/e, BB, ITV1)</a></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Beaux-frères/Belles-sœurs :</td>
+                    <td>Bill Weasley, Charlie Weasley, Percy Weasley, Fred Weasley, Fleur Delacour, Hermione Granger, George Weasley et Ron Weasley.</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Parrain :</td>
+                    <td><a href="sirius-black">Sirius Black</a></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Filleul :</td>
+                    <td>Ted Lupin (RM25)</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Enfance :</td>
+                    <td>élevé par <a href="famille-dursley">les Dursley</a>, dont sa tante Pétunia, la sœur de sa mère, et son mari Vernon.</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Amis :</td>
+                    <td>Meilleur ami de Ron Weasley et d’Hermione Granger (qu'il considère comme son frère et sa sœur [RM19]), ami de Luna Lovegood, ami de Neville Londubat, Seamus Finnigan et Dean Thomas, ses camarades de dortoir, les membres de l’Armée de Dumbledore, les membres de l’Ordre du Phénix, la famille Weasley, Dobby, l’elfe de maison qu’il a libéré, lui était entièrement dévoué, Hagrid fut son « parrain » pour son entrée dans le Monde Magique, s’entendait assez bien avec la plupart des élèves de Poudlard qu’il fréquentait, excepté bien sûr les Serpentard, Dumbledore était une sorte de mentor, de guide, de père de substitution.</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Animaux de compagnie :</td>
+                    <td><a href="hedwige">Hedwige</a> (31 juillet 1991 – 27 juillet 1997).</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Elf de maison :</td>
+                    <td>Kreattur, qu’il hérita de Sirius Black(dont il fera don à l'école Poudlard pour travailler dans les cuisines).</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Domicile :</td>
+                    <td>un cottage à Godric’s Hollow (1980 – 31 octobre 1981), 4, Privet Drive, Little Whinging, Surrey (1er novembre 1981 – 27 juillet 1997).</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Organistaions :</td>
+                    <td>Armée de Dumbledore, équipe de Quidditch de Gryffondor, Club de Slug, Ordre du Phénix, ministère de la Magie.</td>
+                </tr>
+                <tr>
+                    <td><h3>Apparences : </h3></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Yeux :</td>
+                    <td>Ils sont d'un vert brillant, tout comme sa mère.</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Cheveux :</td>
+                    <td>Ils sont noirs, indisciplinés et hérissés à l’arrière, les mêmes que ceux de son père.</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Autres caractéristiques :</td>
+                    <td>Il porte des lunettes rondes, il est petit et maigre, les genoux noueux. Il a une cicatrice en forme d’éclair sur le front.
+                        <small class="citation">« Harry avait toujours été petit et maigre pour son âge (…) Harry avait un visage mince, des genoux Noueux, des cheveux noirs et des yeux d’un vert brillant. Il portait des lunettes rondes qu’il avait fallu rafistoler avec du papier collant (…) La seule chose que Harry aimait bien dans son apparence physique, c’était la fine cicatrice qu’il portait sur le front et qui avait la forme d’un éclair. » (ES2)</small>
+                        </td>
+                </tr>
+                <tr>
+                    <td><h3>Compétences :</h3></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Aptitudes :</td>
+                    <td>Il est « naturellement » joueur de Quidditch, Fourchelang, peut jeter des sortilèges sans baguette, sent la présence des autres, fait des rêves prémonitoires, est particulièrement doué en défense contre les forces du Mal. Il se révèle capable de résister au sortilège de l’Imperium et aux Vélanes. A éprouvé des difficultés apprendre l’Occlumancie.</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Métier :</td>
+                    <td>Harry commença sa formation d’Auror à 17 ans puis devint directeur du Bureau des Aurors en 2007 (BB, JKR).</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Compétences particulières :</td>
+                    <td>Fourchelang</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Patronus :</td>
+                    <td>C'est un cerf (son père, Cornedrue)</td>
+                </tr>
+                <tr>
+                    <td class="description-characters-underline">Célèbre pour :</td>
+                    <td>Avoir vaincu par deux fois Voldemort et survécu par deux fois au sortilège de la Mort (ES, RM). Le cambriolage d'un coffre à Gringotts</td>
+                </tr>
+        </tbody>
+    </table>
+    </section>
+    <section class="characters-right harry-potter">
+    </section>
+</main>
+<!-- End of main content -->
+
+<%- include('partials/footer') %>
