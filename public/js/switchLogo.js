@@ -4,7 +4,7 @@ let app = {
         app.addListenerToActions();
         //app.BgMouseOver();
         //app.BgMouseOut();
-        app.BgChangeHour();
+        app.setHours();
     },
     
     addListenerToActions: function() {
@@ -20,8 +20,8 @@ let app = {
         //logo.classList.remove('logo');
         logo.classList.toggle('dark');
 
-    },/*
-    BgMouseOver: function() {
+    },
+    /*BgMouseOver: function() {
     const el = document.querySelector("#bg");
     const move = 20;
     
@@ -29,30 +29,40 @@ let app = {
     el.style.backgroundPositionX = -10 + "px"; 
     el.style.backgroundPositionY = -10 + "px";
     });
-    }*/BgMouseOver: function() {
+    }BgMouseOver: function() {
     document.querySelector(body).style.backgroundPositionY = "100px"
     },
     BgMouseOut: function() {
         document.querySelector(body).style.backgroundPositionY = "0px"
-    },
-    BgChangeHour: function() {
+    },*/
+    setHours: function(){
         let date = new Date();
         let hours = date.getHours();
-        console.log(hours);
         const body = document.getElementById('body');
-        hours.addEventListener('change', () => {
-            switch(hours) {
-                case(hours <=9): body.classList.toggle('sunlight');
-            break;
-            
-            case(hours <=17): body.classList.toggle('sun');
-            break;
-
-            case(hours <=5): body.classList.toggle('night');
-            break;
-            }
-            });
+        console.log(hours);
+        if (hours > 20 || hours < 6 ){
+            body.classList.add('night');
         }
+        else if (hours < 9 || hours >17){
+            body.classList.add('sunlight');
+        }
+        else if (hours >= 9 || hours < 17){
+            body.classList.add('sun');
+        }
+        else{
+            body.classList.add('night');
+        }
+
+    }
+    // BgChangeHour: function() {
+        
+
+    //     const body = document.getElementById('body');
+        
+    //     hours.addEventListener('change', () => {
+            
+    //         });
+    //     }
         
 };
     document.addEventListener('DOMContentLoaded', app.init );

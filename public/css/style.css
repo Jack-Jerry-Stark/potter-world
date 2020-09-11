@@ -8,11 +8,11 @@ body{
     background-attachment: fixed, scroll, fixed;
     transition: background 0.2s linear;
     padding-top: 1rem;
-    background-image: url(../images/footer.png), url(../images/bg-middle-sunlight.png), url(../images/bg-body-sunlight.jpg);
+    /* background-image: url(../images/footer.png), url(../images/bg-middle-sunlight.png), url(../images/bg-body-sunlight.jpg);
     background-size: 100%, 100%, cover;
     background-position: bottom 0 center, top center, top 0 center;
     background-repeat: no-repeat;
-    background-attachment: fixed, scroll, fixed;
+    background-attachment: fixed, scroll, fixed; */
   } 
 /* body:hover{
 /*transform: scale(1.3);
@@ -30,7 +30,7 @@ height: 105%;*/
     }
   } */
 
-body.dark{
+.body-dark{
     background-image: 
     url(../images/footer.png),
     url(../images/bg-middle-night.png),
@@ -51,7 +51,37 @@ body.sun{
     background-attachment: fixed, scroll, fixed;
     transition: background 0.2s linear;
     padding-top: 1rem;
-    background-image: url(../images/footer-sun.png), url(../images/bg-middle-sun.png), url(../images/bg-body-sun.jpg);
+    background-image: url(../images/footer-sun.png), url(../images/bg-middle.png), url(../images/bg-body-sun.jpg);
+    background-size: 100%, 100%, cover;
+    background-position: bottom 0 center, top center, top 0 center;
+    background-repeat: no-repeat;
+    background-attachment: fixed, scroll, fixed;
+  } 
+  body.sunlight{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    color: white!important;
+    background-attachment: fixed, scroll, fixed;
+    transition: background 0.2s linear;
+    padding-top: 1rem;
+    background-image: url(../images/footer.png), url(../images/bg-middle-sunlight.png), url(../images/bg-body-sunlight.jpg);
+    background-size: 100%, 100%, cover;
+    background-position: bottom 0 center, top center, top 0 center;
+    background-repeat: no-repeat;
+    background-attachment: fixed, scroll, fixed;
+  } 
+  body.night{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    color: white!important;
+    background-attachment: fixed, scroll, fixed;
+    transition: background 0.2s linear;
+    padding-top: 1rem;
+    background-image: url(../images/footer-night.png), url(../images/bg-middle-night.png), url(../images/bg-body-night.jpg);
     background-size: 100%, 100%, cover;
     background-position: bottom 0 center, top center, top 0 center;
     background-repeat: no-repeat;
