@@ -24,6 +24,9 @@
 
 </head>
 <body id="body">
+    <div class="soleil"></div>
+    <div class="background background-middle"></div>
+
 <!--     
    <img src="../images/bg-middle-night.png" class="thumbnail bg-middle" id="bg">
    <img src="../images/footer-night.png" class="bg-footer" id="bg"> -->
@@ -182,7 +185,8 @@
             <div class="baseline-content">
                 <small class="bottom_content__txt">PotterWorld is an unofficial Harry Potter fansite. HARRY POTTER, characters, names, and all related indicia are trademarks of Warner Bros. © 2001 – 2020. Develop by</small><a class="logo-small-link" href="https://www.jd-dev.me"><img src="../images/logo_small.png" class="logo_small" alt="J.J.R Stark"></a>
             </div>
-    </div>             
+    </div>       
+    <div class="background background-footer"></div>      
 </footer>
 <!-- End of footer content -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -197,19 +201,7 @@
     
     <script src="../js/simpleParallax.js-master/src/simpleParallax.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
-    <script>
-        var image = document.getElementsByClassName('thumbnail');
-        new simpleParallax(image, {
-	    orientation: 'right'
-});
-const el = document.getElementById("#bg");
-
-    el.addEventListener("mousemove", (e) => {
-    el.style.backgroundPositionX = -e.offsetX + "px";
-    el.style.backgroundPositionY = -e.offsetY + "px";
     
-    });
-</script>
 
 </body>
 </html>

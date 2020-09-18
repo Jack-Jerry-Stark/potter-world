@@ -23,6 +23,11 @@
     </head>
 
     <body class="body" id="body">
+        <div>
+            <div class="soleil" id="soleil"></div>
+        </div>
+        <div id="background" class="background"></div>
+        <div id="fbackground" class="fbackground"></div>
 
         <header class="top">
             <nav class="navbar navbar-expand-lg navbar-dark ">
@@ -35,18 +40,19 @@
             
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                      <li class="nav-item"><div class="btnSwitchTheme">
-                        <input type="checkbox" class="checkbox" id="chk" />
-                        <label class="label" for="chk">
-                            
-                            <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            <i class="fa fa-moon-o" aria-hidden="true"></i>
-                            <div class="ball"></div>
-                        </label>
-                      </div></li>
-                      <li class="nav-item active">
-                          <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
-                      </li>
+                    <li class="nav-item" id="btnSwitchTheme">
+                        <div class="btnSwitchTheme">
+                           <input type="checkbox" class="checkbox" id="chk" />
+                           <label class="label" for="chk">
+                               <i class="fa fa-sun-o" aria-hidden="true"></i>
+                               <i class="fa fa-moon-o" aria-hidden="true"></i>
+                               <div class="ball"></div>
+                           </label>
+                       </div>
+                   </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                    </li>
                       
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -132,7 +138,7 @@
         <!-- Start of main content -->
         <main class="container">
             <article class="home_content">
-                <h1 class="titreH1">Vous êtes fan d'Harry Potter?</h1>
+                <h1 class="titreH1" id="titleh1">Vous êtes fan d'Harry Potter?</h1>
                 <p class="home_text">
                     Ça tombe bien nous aussi ! Alors prenez plaisir à découvrir le monde d’Harry Potter, grâce à de nombreuses informations sur notre jeune héros préféré! Et si vous vous sentez l’âme d’un champion, intégrer l’une des quatres maisons de Poudlard, et remportez la coupe avec vos camarades en répondant à notre quiz ! Mais avant cela, il faut passer par l’étape du Choixpeau Magique, alors enfourchez votre balais et direction l’inscription !</p>
                 <a class="btn login_button">                        
@@ -148,18 +154,6 @@
             <div class="bottom_content">
 
                 <ul class="nav nav-footer">
-    
-                    <!--<li class="nav-item">
-                         <div class="btnSwitchTheme">
-                            <input type="checkbox" class="checkbox" id="chk" />
-                            <label class="label" for="chk">
-                                
-                                <i class="fa fa-sun-o" aria-hidden="true"></i>
-                                <i class="fa fa-moon-o" aria-hidden="true"></i>
-                                <div class="ball"></div>
-                            </label>
-                          </div> 
-                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" href="legals.html">Mentions légales</a>
                     </li>

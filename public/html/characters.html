@@ -4,11 +4,9 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Reset CSS -->
         <link href="../css/reset.css" rel="stylesheet">
-
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
             <!-- UIkit CSS -->
@@ -17,14 +15,16 @@
         <link href="../css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/font-awesome.min.css">
-
-
+        <link rel="icon" href="../images/favicon.ico" />
         <title>Potter World</title>
     </head>
 
-    <body id="bodyList" onload="set_style_from_cookie()">
-
-
+    <body class="body" id="body">
+        <div>
+            <div class="soleil" id="soleil"></div>
+        </div>
+        <div id="background" class="background"></div>
+        <div id="fbackground" class="fbackground"></div>
         <header class="top">
             <nav class="navbar navbar-expand-lg navbar-dark ">
                 <!-- start of button's menu for the mobile version -->
@@ -36,15 +36,16 @@
             
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                      <li class="nav-item"><div class="btnSwitchTheme">
-                        <input type="checkbox" class="checkbox" id="chk" />
-                        <label class="label" for="chk">
-                            
-                            <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            <i class="fa fa-moon-o" aria-hidden="true"></i>
-                            <div class="ball"></div>
-                        </label>
-                      </div></li>
+                      <li class="nav-item" id="btnSwitchTheme">
+                         <div class="btnSwitchTheme">
+                            <input type="checkbox" class="checkbox" id="chk" />
+                            <label class="label" for="chk">
+                                <i class="fa fa-sun-o" aria-hidden="true"></i>
+                                <i class="fa fa-moon-o" aria-hidden="true"></i>
+                                <div class="ball"></div>
+                            </label>
+                        </div>
+                    </li>
                       <li class="nav-item active">
                           <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
                       </li>
@@ -131,7 +132,7 @@
         <!-- End of Header -->
         
         <!-- Start of main content -->
-        <main class="container_character" uk-filter="target: .js-filter">
+        <main class="container_list" uk-filter="target: .js-filter">
             <section class="characters-left">
                 <nav class="breadcrumb-content" aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -368,18 +369,6 @@
             <div class="bottom_content">
 
                 <ul class="nav nav-footer">
-    
-                    <!--<li class="nav-item">
-                         <div class="btnSwitchTheme">
-                            <input type="checkbox" class="checkbox" id="chk" />
-                            <label class="label" for="chk">
-                                
-                                <i class="fa fa-sun-o" aria-hidden="true"></i>
-                                <i class="fa fa-moon-o" aria-hidden="true"></i>
-                                <div class="ball"></div>
-                            </label>
-                          </div> 
-                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" href="legals.html">Mentions légales</a>
                     </li>
@@ -401,16 +390,14 @@
                     </div>
             </div>             
         </footer>
-        <!-- End of footer content -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      <script src="../js/themeScript.js"></script>
-      <script src="../js/switchBgList.js"></script>
-      <!-- UIkit JS -->
-      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit-icons.min.js"></script>
-
-      
-    </body>
-</html>
+         <!-- End of footer content -->
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+         <script src="../js/themeScript.js"></script>
+         <script src="../js/switchLogo.js"></script>
+         <!-- UIkit JS -->
+         <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit-icons.min.js"></script>
+       </body>
+   </html>
