@@ -2,6 +2,7 @@ let app = {
     // J'initialise mon app
     init: function () {
         app.addListenerToActions();
+       // app.prepareListener();
         app.setHours();
     },
 
@@ -32,7 +33,17 @@ let app = {
         fbackground.classList.add('dark');
         fbackground.style.transition = "5s linear";
     },
+    
 
+    // prepareListener: () => {
+    //     app.selectElement = document.getElementById('select');
+    //     if(app.selectElement) {
+    //         app.selectElement.addEventListener('change', app.handleChange);
+    //     }
+    // },
+    // handleChange: () => {
+    //     document.getElementById('form').submit();
+    // },
   // Fonction qui permet de changer de theme en fonction de l'heure qu'il est
     setHours: function(){
         let date = new Date();
@@ -50,12 +61,17 @@ let app = {
         
         if (hours > 20 || hours < 6 ){
             background.classList.add('night');
+            background.style.transition = "5s linear";
             fbackground.classList.add('night');
+            fbackground.style.transition = "5s linear";
             body.classList.add('night');
+            body.style.transition = "5s linear";
             soleil.classList.toggle('moon');
+            soleil.style.transition = "5s linear";
             logo.classList.toggle('dark');
+            logo.style.transition = "5s linear";
             h2.style.color = '#ffffff';
-            switchBtn.style.display = 'none';
+            //switchBtn.style.display = 'none';
         }
         else if (hours < 9 || hours >17){
             background.classList.add('sunlight');
@@ -63,25 +79,35 @@ let app = {
             body.classList.add('sunlight');
             soleil.classList.toggle('twilight');
             h1.style.color = '#ffffff';
-            h2.style.color = '#ffffff';
+            h2.style.color = '#FF8A0D';
             logo.classList.toggle('dark');
         }
         else if (hours >= 9 || hours < 17){
             background.classList.add('sun');
+            background.style.transition = "5s linear";
             body.classList.toggle('sun');
+            body.style.transition = "5s linear";
             fbackground.classList.add('sun');
+            fbackground.style.transition = "5s linear";
             
         }
         else{
             background.classList.add('dark');
+            background.style.transition = "5s linear";
             body.classList.add('dark');
+            body.style.transition = "5s linear";
             soleil.classList.toggle('darkMoon');
+            soleil.style.transition = "5s linear";
             logo.classList.toggle('dark');
+            logo.style.transition = "5s linear";
             fbackground.classList.add('dark');
-            h2.style.color = '#ffffff';
-            switchBtn.style.display = 'none';
+            fbackground.style.transition = "5s linear";
+            h2.style.color = '#FF8A0D';
+            h2.style.transition = "5s linear";
+           // switchBtn.style.display = 'none';
         }
-    }
+    },
 };
     document.addEventListener('DOMContentLoaded', app.init );
 
+    

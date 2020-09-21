@@ -1,26 +1,26 @@
-const { Character } = require('../models/');
+// const { Character } = require('../models/');
 
-const charactersController = {
+// const charactersController = {
 
-  characters: async (req, res) => {
-    try {
-      const characters = await Character.findAll({
-        association: "blood",
-        include: ['name'],
-        order : [
-          ['position', 'ASC'],
-          ['character', 'id', 'ASC']
-      ]
-      });
+//   characters: async (req, res) => {
+//     try {
+//       const characters = await Character.findAll({
+//         association: "blood",
+//         include: ['name'],
+//         order : [
+//           ['position', 'ASC'],
+//           ['character', 'id', 'ASC']
+//       ]
+//       });
       
-      res.render('characters', { characters });
-    } catch (err) {
-      console.trace(err);
-      res.status(500).send(err);
-    }
-  }
+//       res.render('characters', { characters });
+//     } catch (err) {
+//       console.trace(err);
+//       res.status(500).send(err);
+//     }
+//   }
 
-};
+// };
 
 
-module.exports = charactersController;
+// module.exports = charactersController;
