@@ -1,13 +1,13 @@
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
-const dataMapper = require('./app/dataMapper');
+
 const router = require('./app/router');
 
 const server = express();
 
 server.set('view engine', 'ejs');
-server.set('views', __dirname + '/app/views');
+server.set('views', __dirname + '/views');
 
 // server.use(session({
 //     secret: process.env.APP_SECRET,
@@ -19,7 +19,8 @@ server.set('views', __dirname + '/app/views');
 //     }
 // }));
 
-server.use(express.static('public'));
+server.use(express.static( __dirname + '/../public' ));
+
 server.use(router);
 
 const port = process.env.PORT || 5050;

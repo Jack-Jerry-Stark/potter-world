@@ -15,7 +15,21 @@ const schoolController = {
           res.status(500).send(err);
         }
       }
-  
+  // school: (req, res) => {
+//   // récupérer les données dont on a besoin
+//   dataMapper.getTypes((error, result) => {
+//       if (error) {
+//           console.trace(error);
+//           res.sendStatus(500);
+//       }
+//       else {
+//           // appeler la vue et lui passer
+//           res.render('school', {
+//               school: result.rows,
+//           });
+//       }
+//   });
+// }
   };
   
   module.exports = schoolController;

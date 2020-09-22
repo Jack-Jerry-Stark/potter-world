@@ -716,41 +716,41 @@ text-shadow: 1px 1px 2px #000000;
     
 }
 
-.gryffondor{
+.Gryffondor{
     background-color: #dc3545!important;
     color:#ffc107!important;
     font-weight: 700;
 }
-.card-gryffondor{
+.card-Gryffondor{
     color: #ffc107;
     font-weight: 700;
 }
 
-.card-serpentard{
+.card-Serpentard{
     color: black!important;
     font-weight: 700;
 }
-.serpentard{
+.Serpentard{
     background-color: #28a745!important;
     color: black!important;
     font-weight: 700;
 }
 
-.card-poufsouffle{
+.card-Poufsouffle{
     color: black!important;
     font-weight: 700;
 }
-.poufsouffle{
+.Poufsouffle{
     background-color: #ffc107!important;
     color: black!important;
     font-weight: 700;
 }
 
-.card-serdaigle{
+.card-Serdaigle{
     color: white!important;
     font-weight: 700;
 }
-.serdaigle{
+.Serdaigle{
     background-color: #17a2b8!important; 
     color: white!important;
     font-weight: 700;
@@ -761,22 +761,22 @@ text-shadow: 1px 1px 2px #000000;
     font-weight: 700;
    
 }
-.card-hover-gryffondor{
+.card-hover-Gryffondor{
     background: #dc3545;
     background: rgba(197, 8, 8, 0.7);
 }
 
-.card-hover-serpentard{
+.card-hover-Serpentard{
     background: #28a745;
     background: rgba(4, 155, 37, 0.7);
 }
 
-.card-hover-serdaigle{
+.card-hover-Serdaigle{
     background: #17a2b8;
     background: rgb(8, 169, 197, 0.7);
 }
 
-.card-hover-poufsouffle{
+.card-hover-Poufsouffle{
 	background: #ffc107;
 	background: rgba(238, 203, 3, 0.7);
 }
