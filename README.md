@@ -16,4 +16,8 @@ I used Adobe Illustrator for created the website's design. Worked in 2 days. Suc
 
 1. Day 1 : Home Page development in HTML 5 et CSS3. Add of JS for used a toggle's button to switch in dark and light theme in the global website.
 
-2. Category & Characters pages : in progress...
+2. Category & Characters pages : I add a new style page from the character's page, character's list Page, signup's page. It's a new background image in 3 parts for a good transition in transform and changed hours, because the theme changed of style to 6:00 PM, 8:00 PM and 9:00 AM, with the dark mode for all.
+
+## Step 3 : Start of dynamics pages
+
+1. I start the development of the dynamics render vue with Node.js and Express. I used to EJS, PG and dotenv packages.
